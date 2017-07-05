@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    373012,       6588]
-NotebookOptionsPosition[     55370,       1141]
-NotebookOutlinePosition[    368171,       6475]
-CellTagsIndexPosition[    367875,       6463]
+NotebookDataLength[    375204,       6640]
+NotebookOptionsPosition[     57133,       1183]
+NotebookOutlinePosition[    369934,       6517]
+CellTagsIndexPosition[    369638,       6505]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -489,8 +489,7 @@ has been proven to be useful for this problem",
  Cell[BoxData[
   FormBox[
    SuperscriptBox["", 
-    RowBox[{"[", "1", "]"}]], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    RowBox[{"[", "1", "]"}]], TraditionalForm]],ExpressionUUID->
   "44e67bd8-b222-429e-9c43-a0dcfa88338b"],
  ". "
 }], "TemplateText",
@@ -721,9 +720,9 @@ Cell[BoxData[
   ContinuousAction->True]], "Output",
  CellChangeTimes->{
   3.7081917074752183`*^9, {3.7081918929491224`*^9, 3.708191912738325*^9}, 
-   3.708194849010928*^9, 3.7081993603002195`*^9, 
-   3.708205109822273*^9},ExpressionUUID->"244f8289-8c68-4061-baac-\
-5d81367f54e9"],
+   3.708194849010928*^9, 3.7081993603002195`*^9, 3.708205109822273*^9, 
+   3.708257462126294*^9},ExpressionUUID->"6e311467-81d1-4cc6-9518-\
+efa3ae6b53c7"],
 
 Cell[BoxData[
  DynamicBox[ToBoxes[
@@ -735,8 +734,9 @@ Cell[BoxData[
   ImageSizeCache->{114., {88.5, 94.5}}]], "Output",
  CellChangeTimes->{
   3.7081917074752183`*^9, {3.7081918929491224`*^9, 3.708191912738325*^9}, 
-   3.708194849010928*^9, 3.7081993603002195`*^9, 
-   3.7082051098379*^9},ExpressionUUID->"e1139c39-1853-4dc1-8de0-b1db6a9abfaa"]
+   3.708194849010928*^9, 3.7081993603002195`*^9, 3.708205109822273*^9, 
+   3.7082574621368227`*^9},ExpressionUUID->"40932970-1d01-4340-bddb-\
+80ec77729153"]
 }, Open  ]]
 }, Open  ]],
 
@@ -961,10 +961,26 @@ classifier having a certain bias towards most frequent words. "
  TextJustification->1,ExpressionUUID->"8139aa3f-9a38-47c0-b273-e6de6bdbc42d"]
 }, Open  ]],
 
+Cell[CellGroupData[{
+
 Cell["Code", "TemplateSubsection",
  CellChangeTimes->{{3.549542047850762*^9, 3.549542050840076*^9}, 
    3.549542327097245*^9},ExpressionUUID->"c54bc669-1d00-4e87-877b-\
 cfd746ce37fa"],
+
+Cell[TextData[{
+ "Link to GitHub repository: ",
+ ButtonBox["https://github.com/andoresu47/wss_project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/andoresu47/wss_project"], None},
+  ButtonNote->"https://github.com/andoresu47/wss_project"]
+}], "Text",
+ CellChangeTimes->{{3.7082574915464873`*^9, 3.708257537574628*^9}, {
+  3.7082577471119537`*^9, 
+  3.7082577872065916`*^9}},ExpressionUUID->"70bd6709-3fd9-4d51-943a-\
+88d2810772cf"]
+}, Open  ]],
 
 Cell["Written Content / Lesson Plans", "TemplateSubsection",
  CellChangeTimes->{{3.708096199547399*^9, 
@@ -1006,14 +1022,18 @@ Cell["Data Sources Links/References", "TemplateSubsection",
  CellTags->
   "DataSources",ExpressionUUID->"595aec4a-a293-426a-b50c-4acce4123cb2"],
 
-Cell["\<\
-Data was taken from the Computer Laboratory of the University of Cambridge \
-via the following URL: 
-http://www.cl.cam.ac.uk/~fh295/dicteval.html\
-\>", "Text",
+Cell[TextData[{
+ "Data was taken from the Computer Laboratory of the University of Cambridge \
+via the following URL: \n",
+ ButtonBox["http://www.cl.cam.ac.uk/~fh295/dicteval.html",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.cl.cam.ac.uk/~fh295/dicteval.html"], None},
+  ButtonNote->"http://www.cl.cam.ac.uk/~fh295/dicteval.html"]
+}], "Text",
  CellChangeTimes->{{3.7082045540693865`*^9, 3.708204616285229*^9}, {
-  3.7082046561138687`*^9, 
-  3.7082047351381273`*^9}},ExpressionUUID->"cb940caa-fd5d-4f2f-8a71-\
+  3.7082046561138687`*^9, 3.7082047351381273`*^9}, {3.7082575633681765`*^9, 
+  3.7082575633686485`*^9}},ExpressionUUID->"cb940caa-fd5d-4f2f-8a71-\
 6e533684c2dc"]
 }, Open  ]],
 
@@ -1056,10 +1076,13 @@ Cell["Background Info Links/References", "TemplateSubsection",
 Cell["\<\
 [1] Hill, F. Cho, KH., Korhonen, A., and Bengio, Y. Learning to Understand \
 Phrases by Embedding the Dictionary. 2016. Transactions of the Association \
-for Computational Linguistics (TACL).\
+for Computational Linguistics (TACL).
+[2] http://reference.wolfram.com/language/ref/Classify.html
+[3] http://reference.wolfram.com/language/ref/ClassifierMeasurements.html\
 \>", "Text",
- CellChangeTimes->{{3.7081952949174495`*^9, 
-  3.7081953185793543`*^9}},ExpressionUUID->"211977eb-b97c-4956-98c1-\
+ CellChangeTimes->{{3.7081952949174495`*^9, 3.7081953185793543`*^9}, {
+  3.708257634781523*^9, 
+  3.708257649679618*^9}},ExpressionUUID->"211977eb-b97c-4956-98c1-\
 e74ff2a43f1f"]
 }, Open  ]],
 
@@ -1069,24 +1092,43 @@ Cell["Keywords", "TemplateSubsection",
  CellChangeTimes->{{3.549624602331629*^9, 3.549624604729114*^9}},
  CellTags->"Keywords",ExpressionUUID->"0a9d4fd1-d336-4f32-b85d-12e6f9eed8ed"],
 
-Cell["Provide keywords as items", "TemplateComment",
- CellChangeTimes->{{3.70811356171093*^9, 3.7081135645971746`*^9}, {
-  3.7081136127408867`*^9, 
-  3.708113615106327*^9}},ExpressionUUID->"98efa464-d671-4dc2-97d9-\
-29e7a0668393"],
-
 Cell[CellGroupData[{
 
-Cell["< keyword 1 >", "Item",
+Cell["Reverse", "Item",
  CellChangeTimes->{{3.708096350583043*^9, 3.7080963544862823`*^9}, {
-  3.708113540381196*^9, 
-  3.708113546129714*^9}},ExpressionUUID->"3b9a0db3-df49-4532-b956-\
+  3.708113540381196*^9, 3.708113546129714*^9}, {3.708257284718649*^9, 
+  3.708257290808598*^9}},ExpressionUUID->"3b9a0db3-df49-4532-b956-\
 8ec2c42dd8bf"],
 
-Cell["< keyword 2 >", "Item",
- CellChangeTimes->{{3.708096350583043*^9, 
-  3.7080963563232718`*^9}},ExpressionUUID->"acccdba7-4cc8-463f-9532-\
-578badae9914"]
+Cell["Dictionary", "Item",
+ CellChangeTimes->{{3.708096350583043*^9, 3.7080963563232718`*^9}, {
+  3.708257293678849*^9, 
+  3.708257295309816*^9}},ExpressionUUID->"acccdba7-4cc8-463f-9532-\
+578badae9914"],
+
+Cell["Classify", "Item",
+ CellChangeTimes->{{3.708096350583043*^9, 3.7080963563232718`*^9}, {
+  3.708257293678849*^9, 
+  3.7082573029590335`*^9}},ExpressionUUID->"680a0fdd-5fb7-4875-b04a-\
+5aec75c09028"],
+
+Cell["Training", "Item",
+ CellChangeTimes->{{3.708096350583043*^9, 3.7080963563232718`*^9}, {
+  3.708257293678849*^9, 3.7082573021873865`*^9}, {3.7082574248661194`*^9, 
+  3.708257426447217*^9}},ExpressionUUID->"b0c2c1f4-234d-4732-8ba6-\
+32a123ab5733"],
+
+Cell["Testing", "Item",
+ CellChangeTimes->{{3.708096350583043*^9, 3.7080963563232718`*^9}, {
+  3.708257293678849*^9, 3.7082573021873865`*^9}, {3.7082574248661194`*^9, 
+  3.708257429646874*^9}},ExpressionUUID->"782ad53d-c15c-499f-94dc-\
+91873bcd6dce"],
+
+Cell["Neural Network", "Item",
+ CellChangeTimes->{{3.708096350583043*^9, 3.7080963563232718`*^9}, {
+  3.708257293678849*^9, 3.7082573021873865`*^9}, {3.7082574248661194`*^9, 
+  3.708257433945157*^9}},ExpressionUUID->"2410f265-bc93-4549-9701-\
+b0c8006f3197"]
 }, Open  ]]
 }, Open  ]],
 
@@ -6418,58 +6460,58 @@ adobe.com/xap/1.0/> <tiff:ResolutionUnit>2</tiff:ResolutionUnit> \
 (* Internal cache information *)
 (*CellTagsOutline
 CellTagsIndex->{
- "Author"->{
-  Cell[1150, 34, 529, 7, 
-  28, "TemplateTagItem", "ExpressionUUID" -> "0f6ba866-
-   c3d0-4311-9b18-4f6e1b8657c7",
-   CellTags->"Author"]},
- "Mentor"->{
-  Cell[1682, 43, 510, 7, 
-  28, "TemplateTagItem", "ExpressionUUID" -> "0e67a180-
-   ad7d-4310-9cf8-641a37487105",
-   CellTags->"Mentor"]},
  "Affiliation"->{
   Cell[2195, 52, 516, 8, 
   28, "TemplateTagItem", "ExpressionUUID" -> "f040e7eb-bcb1-4d97-8beb-
    ea56f0aff682",
    CellTags->"Affiliation"]},
+ "Author"->{
+  Cell[1150, 34, 529, 7, 
+  28, "TemplateTagItem", "ExpressionUUID" -> "0f6ba866-
+   c3d0-4311-9b18-4f6e1b8657c7",
+   CellTags->"Author"]},
  "DataSources"->{
-  Cell[50517, 1002, 257, 4, 
+  Cell[51029, 1018, 257, 4, 
   62, "TemplateSubsection", "ExpressionUUID" -> "595aec4a-a293-426a-
    b50c-4acce4123cb2",
    CellTags->"DataSources"]},
  "FutureDirections"->{
-  Cell[51164, 1021, 276, 4, 
+  Cell[51918, 1041, 276, 4, 
   73, "TemplateSubsection", "ExpressionUUID" -> "e5647c6a-
    cb6b-4235-8887-8cfbb24ef769",
    CellTags->"FutureDirections"]},
- "References"->{
-  Cell[52311, 1048, 313, 5, 
-  73, "TemplateSubsection", "ExpressionUUID" -> "f66f7ca2-dcb9-4c06-9d0a-
-   f2cc48d9fd79",
-   CellTags->"References"]},
  "Keywords"->{
-  Cell[53009, 1067, 182, 2, 
+  Cell[53946, 1090, 182, 2, 
   73, "TemplateSubsection", "ExpressionUUID" -> "0a9d4fd1-d336-4f32-
    b85d-12e6f9eed8ed",
    CellTags->"Keywords"]},
  "LastModifiedDate"->{
-  Cell[54192, 1104, 230, 7, 
+  Cell[55955, 1146, 230, 7, 
   29, "LastModified", "ExpressionUUID" -> "6c2986a7-0e4f-4a42-8236-
    d59e21b9f9f8",
-   CellTags->"LastModifiedDate"]}
+   CellTags->"LastModifiedDate"]},
+ "Mentor"->{
+  Cell[1682, 43, 510, 7, 
+  28, "TemplateTagItem", "ExpressionUUID" -> "0e67a180-
+   ad7d-4310-9cf8-641a37487105",
+   CellTags->"Mentor"]},
+ "References"->{
+  Cell[53065, 1068, 313, 5, 
+  73, "TemplateSubsection", "ExpressionUUID" -> "f66f7ca2-dcb9-4c06-9d0a-
+   f2cc48d9fd79",
+   CellTags->"References"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Author", 366545, 6420},
- {"Mentor", 366698, 6425},
- {"Affiliation", 366856, 6430},
- {"DataSources", 367019, 6435},
- {"FutureDirections", 367193, 6440},
- {"References", 367366, 6445},
- {"Keywords", 367531, 6450},
- {"LastModifiedDate", 367702, 6455}
+ {"Affiliation", 368313, 6462},
+ {"Author", 368471, 6467},
+ {"DataSources", 368629, 6472},
+ {"FutureDirections", 368803, 6477},
+ {"Keywords", 368974, 6482},
+ {"LastModifiedDate", 369145, 6487},
+ {"Mentor", 369308, 6492},
+ {"References", 369465, 6497}
  }
 *)
 (*NotebookFileOutline
@@ -6503,90 +6545,100 @@ Cell[24038, 433, 964, 16, 30, "TemplateText", "ExpressionUUID" -> \
 "854ae70b-14eb-423f-a4a3-db7cbd22f54a"],
 Cell[25005, 451, 1222, 23, 49, "TemplateText", "ExpressionUUID" -> \
 "31932f51-a8da-4910-b7dd-e57591b56e9a"],
-Cell[26230, 476, 1888, 34, 70, "TemplateText", "ExpressionUUID" -> \
+Cell[26230, 476, 1855, 33, 70, "TemplateText", "ExpressionUUID" -> \
 "fc37c58e-b01c-44f1-8892-c017509d95ad"]
 }, Open  ]]
 }, Open  ]],
-Cell[28145, 514, 6920, 145, 62, "TemplateSectionDivider", "ExpressionUUID" -> \
+Cell[28112, 513, 6920, 145, 62, "TemplateSectionDivider", "ExpressionUUID" -> \
 "121daac6-ac48-4910-9f55-fd2749685279"],
 Cell[CellGroupData[{
-Cell[35090, 663, 507, 16, 74, "TemplateSection", "ExpressionUUID" -> \
+Cell[35057, 662, 507, 16, 74, "TemplateSection", "ExpressionUUID" -> \
 "2d847a34-66d2-4516-b974-ff32b660a5bf"],
 Cell[CellGroupData[{
-Cell[35622, 683, 1261, 33, 105, "Code", "ExpressionUUID" -> \
+Cell[35589, 682, 1261, 33, 105, "Code", "ExpressionUUID" -> \
 "04c39ef8-adac-4b21-bb3b-8101ec577644"],
-Cell[36886, 718, 333, 7, 36, "Output", "ExpressionUUID" -> \
-"244f8289-8c68-4061-baac-5d81367f54e9"],
-Cell[37222, 727, 507, 11, 200, "Output", "ExpressionUUID" -> \
-"e1139c39-1853-4dc1-8de0-b1db6a9abfaa"]
+Cell[36853, 717, 355, 7, 36, "Output", "ExpressionUUID" -> \
+"6e311467-81d1-4cc6-9518-efa3ae6b53c7"],
+Cell[37211, 726, 535, 12, 200, "Output", "ExpressionUUID" -> \
+"40932970-1d01-4340-bddb-80ec77729153"]
 }, Open  ]]
 }, Open  ]],
-Cell[37756, 742, 7856, 162, 62, "TemplateSectionDivider", "ExpressionUUID" -> \
+Cell[37773, 742, 7856, 162, 62, "TemplateSectionDivider", "ExpressionUUID" -> \
 "003f9a05-6bef-4291-b1a6-f10f8847b0c0"],
 Cell[CellGroupData[{
-Cell[45637, 908, 186, 3, 74, "TemplateSection", "ExpressionUUID" -> \
+Cell[45654, 908, 186, 3, 74, "TemplateSection", "ExpressionUUID" -> \
 "ba97f0a3-c165-451d-bf4c-74c0b4a4f36e"],
 Cell[CellGroupData[{
-Cell[45848, 915, 270, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[45865, 915, 270, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "a4e3d008-4eb0-4d8e-bed7-33623658821c"],
-Cell[46121, 921, 2771, 39, 277, "Text", "ExpressionUUID" -> \
+Cell[46138, 921, 2771, 39, 277, "Text", "ExpressionUUID" -> \
 "8139aa3f-9a38-47c0-b273-e6de6bdbc42d"]
 }, Open  ]],
-Cell[48907, 963, 183, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[CellGroupData[{
+Cell[48946, 965, 183, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "c54bc669-1d00-4e87-877b-cfd746ce37fa"],
-Cell[49093, 968, 186, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[49132, 970, 458, 11, 30, "Text", "ExpressionUUID" -> \
+"70bd6709-3fd9-4d51-943a-88d2810772cf"]
+}, Open  ]],
+Cell[49605, 984, 186, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "a55786c3-e7a6-4cf3-bb54-b05532239df1"],
 Cell[CellGroupData[{
-Cell[49304, 975, 249, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[49816, 991, 249, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "5a247b12-4033-40a4-960f-65d46bf0f9c2"],
-Cell[49556, 981, 646, 10, 49, "Text", "ExpressionUUID" -> \
+Cell[50068, 997, 646, 10, 49, "Text", "ExpressionUUID" -> \
 "7b263b3b-dd4c-4e2c-b236-48f48cc54978"]
 }, Open  ]],
-Cell[50217, 994, 275, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[50729, 1010, 275, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "f27ae70e-91c7-4506-8835-21b281190700"],
 Cell[CellGroupData[{
-Cell[50517, 1002, 257, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[51029, 1018, 257, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "595aec4a-a293-426a-b50c-4acce4123cb2",
  CellTags->"DataSources"],
-Cell[50777, 1008, 350, 8, 49, "Text", "ExpressionUUID" -> \
+Cell[51289, 1024, 592, 12, 49, "Text", "ExpressionUUID" -> \
 "cb940caa-fd5d-4f2f-8a71-6e533684c2dc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[51164, 1021, 276, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[51918, 1041, 276, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "e5647c6a-cb6b-4235-8887-8cfbb24ef769",
  CellTags->"FutureDirections"],
-Cell[51443, 1027, 831, 16, 51, "Text", "ExpressionUUID" -> \
+Cell[52197, 1047, 831, 16, 51, "Text", "ExpressionUUID" -> \
 "546d1599-ca66-4b33-820c-e4f1b2d8ef1c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52311, 1048, 313, 5, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[53065, 1068, 313, 5, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "f66f7ca2-dcb9-4c06-9d0a-f2cc48d9fd79",
  CellTags->"References"],
-Cell[52627, 1055, 345, 7, 30, "Text", "ExpressionUUID" -> \
+Cell[53381, 1075, 528, 10, 68, "Text", "ExpressionUUID" -> \
 "211977eb-b97c-4956-98c1-e74ff2a43f1f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[53009, 1067, 182, 2, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[53946, 1090, 182, 2, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "0a9d4fd1-d336-4f32-b85d-12e6f9eed8ed",
  CellTags->"Keywords"],
-Cell[53194, 1071, 230, 4, 30, "TemplateComment", "ExpressionUUID" -> \
-"98efa464-d671-4dc2-97d9-29e7a0668393"],
 Cell[CellGroupData[{
-Cell[53449, 1079, 206, 4, 29, "Item", "ExpressionUUID" -> \
+Cell[54153, 1096, 246, 4, 29, "Item", "ExpressionUUID" -> \
 "3b9a0db3-df49-4532-b956-8ec2c42dd8bf"],
-Cell[53658, 1085, 157, 3, 29, "Item", "ExpressionUUID" -> \
-"acccdba7-4cc8-463f-9532-578badae9914"]
+Cell[54402, 1102, 203, 4, 29, "Item", "ExpressionUUID" -> \
+"acccdba7-4cc8-463f-9532-578badae9914"],
+Cell[54608, 1108, 203, 4, 29, "Item", "ExpressionUUID" -> \
+"680a0fdd-5fb7-4875-b04a-5aec75c09028"],
+Cell[54814, 1114, 251, 4, 29, "Item", "ExpressionUUID" -> \
+"b0c2c1f4-234d-4732-8ba6-32a123ab5733"],
+Cell[55068, 1120, 250, 4, 29, "Item", "ExpressionUUID" -> \
+"782ad53d-c15c-499f-94dc-91873bcd6dce"],
+Cell[55321, 1126, 257, 4, 29, "Item", "ExpressionUUID" -> \
+"2410f265-bc93-4549-9701-b0c8006f3197"]
 }, Open  ]]
 }, Open  ]],
-Cell[53842, 1092, 160, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[55605, 1134, 160, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "7829dc32-1c2b-44a2-9c28-0b354f138b29"],
 Cell[CellGroupData[{
-Cell[54027, 1099, 162, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[55790, 1141, 162, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "1cd568fb-8340-49f7-8b1e-208734b6bb99"],
-Cell[54192, 1104, 230, 7, 29, "LastModified", "ExpressionUUID" -> \
+Cell[55955, 1146, 230, 7, 29, "LastModified", "ExpressionUUID" -> \
 "6c2986a7-0e4f-4a42-8236-d59e21b9f9f8",
  CellTags->"LastModifiedDate"],
-Cell[54425, 1113, 917, 24, 43, "Input", "ExpressionUUID" -> \
+Cell[56188, 1155, 917, 24, 43, "Input", "ExpressionUUID" -> \
 "387919cf-8311-4ba3-bacd-ed733929beeb"]
 }, Open  ]]
 }, Open  ]]
