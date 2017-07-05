@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    367617,       6478]
-NotebookOptionsPosition[     50527,       1047]
-NotebookOutlinePosition[    363324,       6381]
-CellTagsIndexPosition[    363028,       6369]
+NotebookDataLength[    370625,       6528]
+NotebookOptionsPosition[     53391,       1093]
+NotebookOutlinePosition[    366188,       6427]
+CellTagsIndexPosition[    365892,       6415]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -721,8 +721,9 @@ Cell[BoxData[
   ContinuousAction->True]], "Output",
  CellChangeTimes->{
   3.7081917074752183`*^9, {3.7081918929491224`*^9, 3.708191912738325*^9}, 
-   3.708194849010928*^9},ExpressionUUID->"be26b825-d2e5-488f-ac0b-\
-219443f6af96"],
+   3.708194849010928*^9, 
+   3.7081993603002195`*^9},ExpressionUUID->"5c42aabe-2ac5-4867-8254-\
+ef639918d107"],
 
 Cell[BoxData[
  DynamicBox[ToBoxes[
@@ -734,8 +735,9 @@ Cell[BoxData[
   ImageSizeCache->{114., {88.5, 94.5}}]], "Output",
  CellChangeTimes->{
   3.7081917074752183`*^9, {3.7081918929491224`*^9, 3.708191912738325*^9}, 
-   3.708194849021456*^9},ExpressionUUID->"8d5252c3-b355-4831-9f11-\
-7c06709a50f3"]
+   3.708194849010928*^9, 
+   3.7081993603158503`*^9},ExpressionUUID->"4bdfdcd3-006d-40b8-9294-\
+1e44851b39d1"]
 }, Open  ]]
 }, Open  ]],
 
@@ -910,11 +912,55 @@ Cell["Detailed Records of the Project", "TemplateSection",
   3.7080962536504707`*^9}},ExpressionUUID->"ba97f0a3-c165-451d-bf4c-\
 74c0b4a4f36e"],
 
+Cell[CellGroupData[{
+
 Cell["Main Results in Detail", "TemplateSubsection",
  CellChangeTimes->{{3.549542055118816*^9, 3.5495420583168*^9}, {
   3.708095979852994*^9, 3.708095983809194*^9}, {3.70809609386517*^9, 
   3.708096094077529*^9}},ExpressionUUID->"a4e3d008-4eb0-4d8e-bed7-\
 33623658821c"],
+
+Cell[TextData[{
+ "The first approach at a solution was to attempt classifying small chunks of \
+data with no special focus on homogeneity; that is, the amount of definitions \
+per word could be very different in the training set (high variance). The \
+results from these tests were underperforming, as the output from previously \
+unseen definitions was always one of the most frequent words of the training \
+set. From these results is that the emphasis turned towards balancing the \
+training data. \n\nThe second approach at exploring possible solutions was \
+built in cases, parting from the simplest one. The first of these consisted \
+in taking 50 of the most common nouns in the English language, with the \
+definitions normalized to the minimum among the maximum number of definitions \
+for each word; in this case 60. Without bias, the classifier proved to be \
+much more accurate. Testing on 50 previously unseen definitions, it showed an \
+accuracy of approximately 80%. \n\nWith confidence from these results, the \
+next step was trying out the same approach for a larger amount of data. This \
+time the training set consisted in words having 50 or more definitions, with \
+the later being normalized to just 50, in order to minimize variance. The \
+resulting classifier showed satisfying results up to the tenth most probable \
+word for a given definition. This means that the expected output was not \
+necessarily the first one to come up, but it was among the top 10 most \
+probable words. \n\nAs a last exploration with ",
+ StyleBox["Classify",
+  FontWeight->"Bold"],
+ ", the training set was taken to be the complete set of data, not caring \
+about variance. As expected, this resulted in poor performance, with the \
+classifier having a certain bias towards most frequent words. "
+}], "Text",
+ CellChangeTimes->{{3.7081996980658045`*^9, 3.7081997575169125`*^9}, {
+  3.7081997963090153`*^9, 3.708199865025689*^9}, {3.7081999005493803`*^9, 
+  3.708199949978334*^9}, {3.7081999938403788`*^9, 3.708200026389062*^9}, {
+  3.7082000642878075`*^9, 3.708200074064791*^9}, {3.7082001054032307`*^9, 
+  3.7082003705198336`*^9}, {3.7082004521649637`*^9, 3.7082004735856667`*^9}, {
+  3.7082005112727036`*^9, 3.708200596321413*^9}, {3.708200786893921*^9, 
+  3.7082008387821236`*^9}, {3.7082008695956435`*^9, 3.708200869873995*^9}, {
+  3.7082014622428384`*^9, 3.7082016035135717`*^9}, {3.7082016352175565`*^9, 
+  3.708201701285938*^9}, {3.7082017911128297`*^9, 3.7082017937733946`*^9}, {
+  3.708201849843512*^9, 3.7082018542415237`*^9}, {3.7082019312152543`*^9, 
+  3.7082019353720403`*^9}, {3.7082019790270977`*^9, 3.708202004436788*^9}, {
+  3.7082021175742617`*^9, 3.7082024826574717`*^9}},
+ TextJustification->1,ExpressionUUID->"8139aa3f-9a38-47c0-b273-e6de6bdbc42d"]
+}, Open  ]],
 
 Cell["Code", "TemplateSubsection",
  CellChangeTimes->{{3.549542047850762*^9, 3.549542050840076*^9}, 
@@ -1045,8 +1091,8 @@ ed733929beeb"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1500, 957},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{748, 948},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
 StyleDefinitions->Notebook[{
    Cell[
@@ -6335,22 +6381,22 @@ CellTagsIndex->{
    c3d0-4311-9b18-4f6e1b8657c7",
    CellTags->"Author"]},
  "DataSources"->{
-  Cell[46908, 940, 257, 4, 
+  Cell[49772, 986, 257, 4, 
   62, "TemplateSubsection", "ExpressionUUID" -> "595aec4a-a293-426a-
    b50c-4acce4123cb2",
    CellTags->"DataSources"]},
  "FutureDirections"->{
-  Cell[47168, 946, 276, 4, 
+  Cell[50032, 992, 276, 4, 
   62, "TemplateSubsection", "ExpressionUUID" -> "e5647c6a-
    cb6b-4235-8887-8cfbb24ef769",
    CellTags->"FutureDirections"]},
  "Keywords"->{
-  Cell[48167, 973, 182, 2, 
+  Cell[51031, 1019, 182, 2, 
   73, "TemplateSubsection", "ExpressionUUID" -> "0a9d4fd1-d336-4f32-
    b85d-12e6f9eed8ed",
    CellTags->"Keywords"]},
  "LastModifiedDate"->{
-  Cell[49350, 1010, 229, 7, 
+  Cell[52214, 1056, 229, 7, 
   29, "LastModified", "ExpressionUUID" -> "42e93caf-49e7-46a8-804c-
    cbbc765e1d38",
    CellTags->"LastModifiedDate"]},
@@ -6360,7 +6406,7 @@ CellTagsIndex->{
    ad7d-4310-9cf8-641a37487105",
    CellTags->"Mentor"]},
  "References"->{
-  Cell[47469, 954, 313, 5, 
+  Cell[50333, 1000, 313, 5, 
   62, "TemplateSubsection", "ExpressionUUID" -> "f66f7ca2-dcb9-4c06-9d0a-
    f2cc48d9fd79",
    CellTags->"References"]}
@@ -6368,14 +6414,14 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Affiliation", 361707, 6326},
- {"Author", 361865, 6331},
- {"DataSources", 362023, 6336},
- {"FutureDirections", 362196, 6341},
- {"Keywords", 362366, 6346},
- {"LastModifiedDate", 362536, 6351},
- {"Mentor", 362699, 6356},
- {"References", 362856, 6361}
+ {"Affiliation", 364569, 6372},
+ {"Author", 364727, 6377},
+ {"DataSources", 364885, 6382},
+ {"FutureDirections", 365058, 6387},
+ {"Keywords", 365228, 6392},
+ {"LastModifiedDate", 365399, 6397},
+ {"Mentor", 365562, 6402},
+ {"References", 365719, 6407}
  }
 *)
 (*NotebookFileOutline
@@ -6405,11 +6451,11 @@ Cell[3079, 73, 20611, 348, 551, "TemplateFigure", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[23727, 426, 308, 5, 74, "TemplateSection", "ExpressionUUID" -> \
 "7f28a721-268a-464e-9bc5-31f61fa28c7d"],
-Cell[24038, 433, 964, 16, 30, "TemplateText", "ExpressionUUID" -> \
+Cell[24038, 433, 964, 16, 49, "TemplateText", "ExpressionUUID" -> \
 "854ae70b-14eb-423f-a4a3-db7cbd22f54a"],
-Cell[25005, 451, 1222, 23, 49, "TemplateText", "ExpressionUUID" -> \
+Cell[25005, 451, 1222, 23, 68, "TemplateText", "ExpressionUUID" -> \
 "31932f51-a8da-4910-b7dd-e57591b56e9a"],
-Cell[26230, 476, 1888, 34, 70, "TemplateText", "ExpressionUUID" -> \
+Cell[26230, 476, 1888, 34, 127, "TemplateText", "ExpressionUUID" -> \
 "fc37c58e-b01c-44f1-8892-c017509d95ad"]
 }, Open  ]]
 }, Open  ]],
@@ -6421,62 +6467,66 @@ Cell[35090, 663, 507, 16, 74, "TemplateSection", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[35622, 683, 1261, 33, 105, "Code", "ExpressionUUID" -> \
 "04c39ef8-adac-4b21-bb3b-8101ec577644"],
-Cell[36886, 718, 283, 6, 36, "Output", "ExpressionUUID" -> \
-"be26b825-d2e5-488f-ac0b-219443f6af96"],
-Cell[37172, 726, 461, 11, 200, "Output", "ExpressionUUID" -> \
-"8d5252c3-b355-4831-9f11-7c06709a50f3"]
+Cell[36886, 718, 311, 7, 36, "Output", "ExpressionUUID" -> \
+"5c42aabe-2ac5-4867-8254-ef639918d107"],
+Cell[37200, 727, 489, 12, 200, "Output", "ExpressionUUID" -> \
+"4bdfdcd3-006d-40b8-9294-1e44851b39d1"]
 }, Open  ]]
 }, Open  ]],
-Cell[37660, 741, 7856, 162, 62, "TemplateSectionDivider", "ExpressionUUID" -> \
+Cell[37716, 743, 7856, 162, 62, "TemplateSectionDivider", "ExpressionUUID" -> \
 "003f9a05-6bef-4291-b1a6-f10f8847b0c0"],
 Cell[CellGroupData[{
-Cell[45541, 907, 186, 3, 74, "TemplateSection", "ExpressionUUID" -> \
+Cell[45597, 909, 186, 3, 74, "TemplateSection", "ExpressionUUID" -> \
 "ba97f0a3-c165-451d-bf4c-74c0b4a4f36e"],
-Cell[45730, 912, 270, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[CellGroupData[{
+Cell[45808, 916, 270, 4, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "a4e3d008-4eb0-4d8e-bed7-33623658821c"],
-Cell[46003, 918, 183, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[46081, 922, 2771, 39, 429, "Text", "ExpressionUUID" -> \
+"8139aa3f-9a38-47c0-b273-e6de6bdbc42d"]
+}, Open  ]],
+Cell[48867, 964, 183, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "c54bc669-1d00-4e87-877b-cfd746ce37fa"],
-Cell[46189, 923, 186, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[49053, 969, 186, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "a55786c3-e7a6-4cf3-bb54-b05532239df1"],
-Cell[46378, 928, 249, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[49242, 974, 249, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "5a247b12-4033-40a4-960f-65d46bf0f9c2"],
-Cell[46630, 934, 275, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[49494, 980, 275, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "f27ae70e-91c7-4506-8835-21b281190700"],
-Cell[46908, 940, 257, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[49772, 986, 257, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "595aec4a-a293-426a-b50c-4acce4123cb2",
  CellTags->"DataSources"],
-Cell[47168, 946, 276, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[50032, 992, 276, 4, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "e5647c6a-cb6b-4235-8887-8cfbb24ef769",
  CellTags->"FutureDirections"],
 Cell[CellGroupData[{
-Cell[47469, 954, 313, 5, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[50333, 1000, 313, 5, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "f66f7ca2-dcb9-4c06-9d0a-f2cc48d9fd79",
  CellTags->"References"],
-Cell[47785, 961, 345, 7, 30, "Text", "ExpressionUUID" -> \
+Cell[50649, 1007, 345, 7, 49, "Text", "ExpressionUUID" -> \
 "211977eb-b97c-4956-98c1-e74ff2a43f1f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48167, 973, 182, 2, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[51031, 1019, 182, 2, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "0a9d4fd1-d336-4f32-b85d-12e6f9eed8ed",
  CellTags->"Keywords"],
-Cell[48352, 977, 230, 4, 30, "TemplateComment", "ExpressionUUID" -> \
+Cell[51216, 1023, 230, 4, 30, "TemplateComment", "ExpressionUUID" -> \
 "98efa464-d671-4dc2-97d9-29e7a0668393"],
 Cell[CellGroupData[{
-Cell[48607, 985, 206, 4, 29, "Item", "ExpressionUUID" -> \
+Cell[51471, 1031, 206, 4, 29, "Item", "ExpressionUUID" -> \
 "3b9a0db3-df49-4532-b956-8ec2c42dd8bf"],
-Cell[48816, 991, 157, 3, 29, "Item", "ExpressionUUID" -> \
+Cell[51680, 1037, 157, 3, 29, "Item", "ExpressionUUID" -> \
 "acccdba7-4cc8-463f-9532-578badae9914"]
 }, Open  ]]
 }, Open  ]],
-Cell[49000, 998, 160, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[51864, 1044, 160, 3, 73, "TemplateSubsection", "ExpressionUUID" -> \
 "7829dc32-1c2b-44a2-9c28-0b354f138b29"],
 Cell[CellGroupData[{
-Cell[49185, 1005, 162, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
+Cell[52049, 1051, 162, 3, 62, "TemplateSubsection", "ExpressionUUID" -> \
 "1cd568fb-8340-49f7-8b1e-208734b6bb99"],
-Cell[49350, 1010, 229, 7, 29, "LastModified", "ExpressionUUID" -> \
+Cell[52214, 1056, 229, 7, 29, "LastModified", "ExpressionUUID" -> \
 "42e93caf-49e7-46a8-804c-cbbc765e1d38",
  CellTags->"LastModifiedDate"],
-Cell[49582, 1019, 917, 24, 43, "Input", "ExpressionUUID" -> \
+Cell[52446, 1065, 917, 24, 43, "Input", "ExpressionUUID" -> \
 "387919cf-8311-4ba3-bacd-ed733929beeb"]
 }, Open  ]]
 }, Open  ]]
